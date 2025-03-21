@@ -3,150 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Bihar Video Player</title>
+    <title>Bihar: The Land of History, Culture, and Development</title>
+    <link rel="icon" type="image/png" href="bihar.png">  <!-- Favicon -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            margin: 20px;
             padding: 20px;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-            overflow: hidden;
-            position: relative;
+            background-color: #f4f4f4;
+            text-align: center;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        h1, h2, h3 {
+            color: #333;
         }
-        .container {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 15px;
+        .title-img, .section-img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        ul {
+            text-align: left;
+            margin-left: 20px;
+            display: inline-block;
+        }
+        p {
+            text-align: justify;
             max-width: 900px;
-            width: 100%;
-            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeIn 1s ease-in-out;
-            position: relative;
-            z-index: 10;
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .video-container:hover {
-            transform: scale(1.03);
-            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7);
-        }
-        video {
-            width: 100%;
-            border-radius: 15px;
-            outline: none;
-        }
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        /* Snowfall Canvas */
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+            margin: auto;
         }
     </style>
 </head>
 <body>
 
-    <canvas id="snowCanvas"></canvas>
+    <img src="bihar.png" alt="Bihar Image" class="title-img" loading="lazy">
+    <h1>Bihar: The Land of History, Culture, and Development</h1>
 
-    <div class="container">
-        <div class="video-container">
-            <video controls>
-                <source src="lv_0_20250321121323.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+    <h2>Introduction</h2>
+    <p>Bihar, located in eastern India, is a state rich in history, culture, and heritage. It has been a center of learning, religion, and power for centuries. From the great Mauryan and Gupta empires to modern economic growth, Bihar plays a significant role in India's development.</p>
 
-    <script>
-        const canvas = document.getElementById("snowCanvas");
-        const ctx = canvas.getContext("2d");
+    <h2>Historical Significance</h2>
+    <img src="history.jpg" alt="Historical Monuments in Bihar" class="section-img" loading="lazy">
+    <p>Bihar has a glorious past and was the center of India's first major empires. Patliputra (modern Patna) was the capital of the Maurya and Gupta dynasties.</p>
+    <p>Some key historical events and places:</p>
+    <ul>
+        <li><b>Magadha Kingdom:</b> One of the most powerful kingdoms in ancient India.</li>
+        <li><b>Maurya Dynasty:</b> Ruled by Chandragupta Maurya and Emperor Ashoka.</li>
+        <li><b>Nalanda University:</b> One of the world's oldest universities, attracting scholars from around the globe.</li>
+        <li><b>Vikramshila University:</b> Another ancient center of learning, famous for Buddhist studies.</li>
+    </ul>
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    <h2>Geography and Climate</h2>
+    <img src="geography.jpg" alt="Geographical Beauty of Bihar" class="section-img" loading="lazy">
+    <p>Bihar covers an area of 94,163 square kilometers and is divided into three geographical regions: North Bihar, South Bihar, and the Gangetic plains. The Ganges River flows through the state, making the land fertile.</p>
+    <p>The state experiences a tropical climate with hot summers (up to 45°C), a monsoon season, and cool winters.</p>
 
-        let snowflakes = [];
+    <h2>Economy and Agriculture</h2>
+    <img src="agriculture.jpg" alt="Agriculture in Bihar" class="section-img" loading="lazy">
+    <p>Bihar is an agricultural powerhouse, with over 70% of the population engaged in farming. The state produces rice, wheat, sugarcane, and maize.</p>
+    <p>In recent years, industrialization and infrastructure development have grown rapidly, attracting investors in manufacturing, food processing, and tourism.</p>
 
-        function createSnowflakes() {
-            for (let i = 0; i < 100; i++) {
-                snowflakes.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 4 + 1,
-                    speedX: Math.random() * 1 - 0.5,
-                    speedY: Math.random() * 3 + 1,
-                });
-            }
-        }
+    <h2>Culture and Festivals</h2>
+    <img src="culture.jpg" alt="Festivals and Culture of Bihar" class="section-img" loading="lazy">
+    <p>Bihar has a rich cultural heritage, with traditions in music, dance, and literature. The main languages spoken are Hindi, Bhojpuri, Maithili, and Magahi.</p>
+    <p>Major festivals celebrated in Bihar include:</p>
+    <ul>
+        <li><b>Chhath Puja:</b> The most important festival, dedicated to the Sun God.</li>
+        <li><b>Diwali and Holi:</b> Festivals of lights and colors.</li>
+        <li><b>Durga Puja:</b> Celebrated with grand enthusiasm.</li>
+        <li><b>Sama-Chakeva:</b> A traditional festival of Mithila region.</li>
+    </ul>
 
-        function drawSnowflakes() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "white";
-            ctx.beginPath();
-            for (let flake of snowflakes) {
-                ctx.moveTo(flake.x, flake.y);
-                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-            }
-            ctx.fill();
-            moveSnowflakes();
-        }
+    <h2>Tourist Attractions</h2>
+    <img src="tourism.jpg" alt="Tourist Places in Bihar" class="section-img" loading="lazy">
+    <p>Bihar is home to many religious and historical sites:</p>
+    <ul>
+        <li><b>Bodh Gaya:</b> The place where Lord Buddha attained enlightenment.</li>
+        <li><b>Nalanda and Vikramshila Universities:</b> Ancient centers of learning.</li>
+        <li><b>Rajgir:</b> A historic town with Buddhist and Jain heritage.</li>
+        <li><b>Patna Sahib Gurudwara:</b> Birthplace of Guru Gobind Singh.</li>
+        <li><b>Valmiki National Park:</b> A tiger reserve and beautiful wildlife sanctuary.</li>
+    </ul>
 
-        function moveSnowflakes() {
-            for (let flake of snowflakes) {
-                flake.x += flake.speedX;
-                flake.y += flake.speedY;
+    <h2>Education and Development</h2>
+    <img src="education.jpg" alt="Education in Bihar" class="section-img" loading="lazy">
+    <p>Bihar is home to prestigious institutions like IIT Patna, NIT Patna, AIIMS Patna, and the revived Nalanda University.</p>
+    <p>The state government has launched various initiatives to improve literacy and skill development. Infrastructure projects, including highways, bridges, and railways, are improving connectivity.</p>
 
-                if (flake.y > canvas.height) {
-                    flake.y = 0;
-                    flake.x = Math.random() * canvas.width;
-                }
-            }
-        }
+    <h2>Famous Personalities from Bihar</h2>
+    <p>Several renowned personalities have emerged from Bihar:</p>
+    <ul>
+        <li><b>Dr. Rajendra Prasad:</b> India's first President.</li>
+        <li><b>Jayaprakash Narayan:</b> Leader of the Total Revolution movement.</li>
+        <li><b>Chanakya:</b> Ancient political strategist and economist.</li>
+        <li><b>Ramdhari Singh Dinkar:</b> Famous Hindi poet.</li>
+    </ul>
 
-        function updateSnowfall() {
-            drawSnowflakes();
-            requestAnimationFrame(updateSnowfall);
-        }
+    <h2>Challenges and Future Prospects</h2>
+    <p>Despite its rich history and resources, Bihar faces challenges such as poverty, unemployment, and migration. However, government efforts in industrialization, education, and infrastructure are improving the situation.</p>
+    <p>The future of Bihar looks promising with rapid urbanization, smart city projects, and a focus on digital development.</p>
 
-        createSnowflakes();
-        updateSnowfall();
-
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            snowflakes = [];
-            createSnowflakes();
-        });
-    </script>
+    <h2>Conclusion</h2>
+    <p>Bihar, with its glorious past and emerging future, is an integral part of India's cultural and economic growth. From ancient civilizations to modern industries, Bihar continues to contribute to the nation. With continued progress in education, infrastructure, and employment opportunities, the state is on a path to transformation.</p>
 
 </body>
 </html>
